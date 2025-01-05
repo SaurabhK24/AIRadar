@@ -29,7 +29,7 @@ export async function getDataSources() {
       { identifier: "https://x.com/ericciarla"},
       { identifier: "https://x.com/CalebPeffer"},
       { identifier: "https://buttondown.com/ainews"},
-      
+    
       { identifier: "https://x.com/EHuanglu"},
       { identifier: "https://x.com/rezkhere"},
       { identifier: "https://x.com/nickscamara_"},

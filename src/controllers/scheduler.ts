@@ -24,15 +24,16 @@ async function createCall() {
 
 export const handleScheduledTask = async (): Promise<void> => {
   try {
-    /**
-     *  const dataSources = await getDataSources();
+    
+    const dataSources = await getDataSources();
+    console.log(dataSources)
     const rawContent = await scrapeSources(dataSources!); 
     const rawContentString = JSON.stringify(rawContent);
     const analysis = await generateDraft(rawContentString);
-    const result = await sendNotifications(analysis!);
-    console.log(result);
-     */
-    createCall();
+    const result = await sendNotifications(analysis);
+    console.log(result, "type shit!");
+    
+    //createCall();
 
   } catch (error) {
     console.error(error);

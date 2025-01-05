@@ -22,7 +22,7 @@ async function handleCron() {
 main();
 
 // Uncomment for scheduled runs
-cron.schedule(`10 23 * * *`, handleCron);
+//cron.schedule(`10 23 * * *`, handleCron);
 
 // Schedule the cron job to run at 10:30 PM every day
 
