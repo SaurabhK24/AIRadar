@@ -3,7 +3,9 @@ import { getDataSources } from '../services/dataSources';  // This one was alrea
 import { generateDraft } from '../services/createMessage';  // This one was already correct
 import { sendNotifications } from '../services/notifications';  // This one was already correct
 import twilio from "twilio";
+import dotenv from 'dotenv';
 
+dotenv.config();
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;

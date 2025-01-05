@@ -2,8 +2,10 @@
   "name": "airadar",
   "version": "1.0.0",
   "description": "Real-time AI trend detection. Tracks industry leaders, analyzes patterns, and delivers daily insights to your platform of choice.",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
+    "start": "nodemon src/index.ts",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

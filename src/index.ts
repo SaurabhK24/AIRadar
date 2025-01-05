@@ -22,10 +22,13 @@ async function handleCron() {
 main();
 
 // Uncomment for scheduled runs
-//cron.schedule(`0 17 * * *`, handleCron);
+cron.schedule(`10 23 * * *`, handleCron);
 
 // Schedule the cron job to run at 10:30 PM every day
-cron.schedule(`45 22 * * *`, async () => {
+
+/**
+ * cron.schedule(`45 22 * * *`, async () => {
   console.log(`Running scheduled task at 10:45 PM...`);
   await handleScheduledTask();
 });
+ */
