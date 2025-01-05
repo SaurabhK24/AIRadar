@@ -1,14 +1,14 @@
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "commonjs",
-      "outDir": "./dist",
-      "rootDir": "./src",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "dist"]
-  }
+  "compilerOptions": {
+    "target": "ES2015", // Correct, allows for modern JavaScript features
+    "module": "commonjs", // Correct for Node.js applications
+    "outDir": "./dist", // Correct, specifies where to output compiled files
+    "rootDir": "./src", // Correct, specifies the root directory of input files
+    "strict": true, // Correct, enables all strict type-checking options
+    "esModuleInterop": true, // Correct, allows default imports from CommonJS modules
+    "skipLibCheck": true, // Correct, skips type checking of declaration files
+    "forceConsistentCasingInFileNames": true // Correct, ensures consistent casing in file names
+  },
+  "include": ["src/**/*"], // Correct, includes all TypeScript files in the src directory
+  "exclude": ["node_modules", "dist"] // Correct, excludes node_modules and dist directories
+}

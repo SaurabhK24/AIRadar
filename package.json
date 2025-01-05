@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mendable/firecrawl-js": "^1.11.2",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.5",
     "@types/node-cron": "^3.0.11",
@@ -25,5 +26,9 @@
     "typescript": "^5.7.2",
     "zod": "^3.24.1",
     "zod-to-json-schema": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/twilio": "^3.19.2"
   }
 }
