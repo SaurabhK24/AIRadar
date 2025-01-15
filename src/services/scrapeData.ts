@@ -23,14 +23,17 @@ const StoriesSchema = z.object({
 });
 
 async function fetchTweets(username: string, startTime: string) {
-  try {
-    const query = `from:${username} 
-      (AI OR "artificial intelligence" OR ML OR "machine learning" OR LLM OR AGI)
-      -is:retweet -is:reply
-      has:links
-    `.replace(/\s+/g, ' ').trim();
 
-    const params = new URLSearchParams({
+  
+  try {
+
+    const query = `from:${username} has:media -is:retweet -is:reply`;
+    const encodedQuery = encodeURIComponent(query);
+
+    console.log("Query is : " + query)
+
+    /**
+     * const params = new URLSearchParams({
       'query': query,
       'max_results': '100',
       'start_time': startTime,
@@ -38,8 +41,13 @@ async function fetchTweets(username: string, startTime: string) {
       'user.fields': 'username,name,verified',
       'expansions': 'author_id'
     });
+     */
+    
 
-    const apiUrl = `https://api.x.com/2/tweets/search/recent?${params}`;
+    
+
+    const apiUrl = `https://api.x.com/2/tweets/search/recent?${query}`;
+
 
     const response = await fetch(apiUrl, {
       headers: {
@@ -49,6 +57,7 @@ async function fetchTweets(username: string, startTime: string) {
 
     if (!response.ok) {
       console.error(`Error fetching tweets for ${username}: ${response.status} ${response.statusText}`);
+      console.log(response);
       return [];
     }
 
@@ -77,6 +86,7 @@ export async function scrapeSources(sources: string[]) {
         }
 
         const username = usernameMatch[1];
+        console.log(username)
         console.log(`Processing tweets for ${username}...`);
 
         const tweets = await fetchTweets(username, startTime);

@@ -8,8 +8,9 @@ export async function getDataSources() {
 
     // List of sources to monitor
     const sources = [
-      { identifier: "https://x.com/OpenAIDevs" },
-      { identifier: "https://x.com/OpenAI" },
+      { identifier: "https://x.com/OpenAIDevs" }
+      /**
+       *  { identifier: "https://x.com/OpenAI" },
       { identifier: "https://x.com/AnthropicAI" },
       { identifier: "https://x.com/AIatMeta" },
       { identifier: "https://x.com/skirano" },
@@ -36,6 +37,8 @@ export async function getDataSources() {
       { identifier: "https://x.com/ericciarla"},
       { identifier: "https://x.com/CalebPeffer"},
       { identifier: "https://buttondown.com/ainews"},
+       */
+     
 
     ];
 

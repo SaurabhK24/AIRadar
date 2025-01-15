@@ -2,6 +2,7 @@ import { scrapeSources } from '../services/scrapeData';  // Updated from scrapeD
 import { getDataSources } from '../services/dataSources';  // This one was already correct
 import { generateDraft } from '../services/createMessage';  // This one was already correct
 import { sendNotifications } from '../services/notifications';  // This one was already correct
+import { testScrape } from '../services/scraperTest';
 import twilio from "twilio";
 import dotenv from 'dotenv';
 
@@ -25,13 +26,15 @@ async function createCall() {
 export const handleScheduledTask = async (): Promise<void> => {
   try {
     
+    //await testScrape();
     const dataSources = await getDataSources();
     console.log(dataSources)
     const rawContent = await scrapeSources(dataSources!); 
-    const rawContentString = JSON.stringify(rawContent);
-    const analysis = await generateDraft(rawContentString);
-    const result = await sendNotifications(analysis);
-    console.log(result, "type shit!");
+    //const rawContentString = JSON.stringify(rawContent);
+    //const analysis = await generateDraft(rawContentString);
+    //const result = await sendNotifications(analysis);
+    //console.log(result, "type shit!");
+   
     
     //createCall();
 
